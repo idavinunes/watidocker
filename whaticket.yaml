@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   whaticket_backend:
-    image: whaticket-backend:latest
+    image: idavinunes/whaticket-backend:latest
     deploy:
       mode: replicated
       replicas: 1
@@ -30,8 +30,8 @@ services:
       - JWT_REFRESH_SECRET=dBSXqFg9TaNUEDXVp6fhMTRLBysP+j2DSqf7+raxD3A=
       - PORT=3001
       - PROXY_PORT=443
-      - BACKEND_URL=https://whapi.axisnetworks.com.br
-      - FRONTEND_URL=https://whafront.axisnetworks.com.br 
+      - BACKEND_URL=https://wtbk.agenciasaved.com.br
+      - FRONTEND_URL=https://front.agenciasaved.com.br 
       - CHROME_ARGS=--no-sandbox --disable-setuid-sandbox
 
       # REDIS
@@ -58,7 +58,7 @@ services:
       - minha_rede
 
   whaticket_frontend:
-    image: whaticket-frontend:latest
+    image: idavinunes/whaticket-frontend:latest
     deploy:
       mode: replicated
       replicas: 1
@@ -72,8 +72,8 @@ services:
           cpus: "4"
           memory: 4196M
     environment:
-      - BACKEND_URL=https://whapi.axisnetworks.com.br
-      - REACT_APP_BACKEND_URL=https://whapi.axisnetworks.com.br
+      - BACKEND_URL=https://wtbk.agenciasaved.com.br
+      - REACT_APP_BACKEND_URL=https://wtbk.agenciasaved.com.br
       - REACT_APP_HOURS_CLOSE_TICKETS_AUTO=24
 
     #labels:
