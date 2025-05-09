@@ -31,7 +31,7 @@ services:
       - PORT=3001
       - PROXY_PORT=443
       - BACKEND_URL=https://wtbk.agenciasaved.com.br
-      - FRONTEND_URL=https://front.agenciasaved.com.br 
+      - FRONTEND_URL=https://front.agenciasaved.com.br
       - CHROME_ARGS=--no-sandbox --disable-setuid-sandbox
 
       # REDIS
